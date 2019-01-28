@@ -32,17 +32,17 @@ class ProductForm(forms.ModelForm):
             raise forms.ValidationError('hellllow')
 
 
-# class RawProductForm(forms.Form):
-#
-#     title = forms.CharField()
-#     description = forms.CharField(
-#         required=False,
-#         widget=forms.Textarea(
-#             attrs={
-#                 'class':'new-class-name two',
-#                 'rows':5,
-#                 'cols':5,
-#
-#                 }
-#                                              ))
-#     price= forms.DecimalField(initial=199.99)
+class RawProductForm(forms.Form):
+
+    title = forms.CharField()
+    description = forms.CharField(
+        required=False,
+        widget=forms.Textarea(
+            attrs={
+                'class':'new-class-name two',
+                'rows':5,
+                'cols':5,
+
+                }
+                                             ))
+    price= forms.DecimalField(initial=199.99)
