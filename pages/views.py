@@ -6,4 +6,11 @@ def home_view(request, *args,**kwargs):
     return render(request,'home.html',{})
 
 def contact_view(request, *args,**kwargs):
-    return HttpResponse("hi contact")
+
+    my_context = {
+        'my_text': 'this is about me',
+        'my_number': 1233,
+        'my_list': [123,234,456]
+
+    }
+    return render(request, 'contact.html',my_context)

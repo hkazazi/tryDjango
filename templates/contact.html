@@ -1,0 +1,17 @@
+
+{%  extends 'base.html' %}
+
+{% block content %}
+ contact
+
+
+
+    <p>{{ my_text }},{{ my_list }}
+    </p>
+    <ul>
+    {% for sub in my_list %}
+    <li>{{forloop.counter }}-{{ sub }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
